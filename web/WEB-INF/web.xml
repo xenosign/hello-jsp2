@@ -3,4 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <context-param>
+        <param-name>imgDir</param-name>
+        <param-value>/upload/img</param-value>
+    </context-param>
+    <context-param>
+        <param-name>testServerIP</param-name>
+        <param-value>127.0.0.1</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>configEx</servlet-name>
+        <jsp-file>/configEx.jsp</jsp-file>
+        <init-param>
+            <param-name>adminId</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>adminPw</param-name>
+            <param-value>1234</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>configEx</servlet-name>
+        <url-pattern>/configEx.jsp</url-pattern>
+    </servlet-mapping>
 </web-app>
