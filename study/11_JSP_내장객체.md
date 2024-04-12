@@ -51,7 +51,7 @@
 ## application 객체
 
 - 해당 서버 전체에서 접근이 가능한 데이터
-- <context-param> 으로 선언하여 사용
+- `<context-param>` 으로 선언하여 사용
 
 ```xml
 <web-app>
