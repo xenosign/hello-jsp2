@@ -9,6 +9,7 @@
     %>
 
     <%
+        <%--        왜 안되는지 아시는분? --%>
         connetedIP = (String) application.getAttribute("connetedIP");
     %>
 
