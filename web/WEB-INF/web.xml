@@ -4,6 +4,17 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <!-- 필터 적용 -->
+    <filter>
+        <filter-name>tempFilter</filter-name>
+        <filter-class>TempFilter</filter-class>
+    </filter>
+    <!-- 모든 Req, Res 에 필터 적용 -->
+    <filter-mapping>
+        <filter-name>tempFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <context-param>
         <param-name>imgDir</param-name>
         <param-value>/upload/img</param-value>
