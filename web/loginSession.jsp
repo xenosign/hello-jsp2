@@ -8,24 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Session Login Page</title>
 </head>
 <body>
-
     <%
-        Cookie[] cookies = request.getCookies();
-        out.println("cookies : " + cookies);
-
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if(cookie.getName().equals("id")) {
-                    response.sendRedirect("loginOk.jsp");
-                }
-            }
-        }
+        if(session.getAttribute("id") != null) response.sendRedirect("loginSessionOk.jsp");
     %>
 
-    <form action="loginCon" method="post">
+    <h1>Session Login Page</h1>
+    <form action="loginSession" method="post">
         ID: <input type="text" name="id" /><br>
         PW: <input type="password" name="pw" /><br>
         <input type="submit" value="login">

@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/loginCon")
-public class loginCon extends HttpServlet {
+@WebServlet("/loginCookie")
+public class LoginCookie extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
@@ -38,7 +38,7 @@ public class loginCon extends HttpServlet {
 		response.addCookie(cookie);
 		cookie.setMaxAge(60 * 60);
 
-		response.sendRedirect("loginOk.jsp");
+		response.sendRedirect("loginCookieOk.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
