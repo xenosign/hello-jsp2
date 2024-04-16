@@ -9,7 +9,7 @@
         <filter-name>tempFilter</filter-name>
         <filter-class>TempFilter</filter-class>
     </filter>
-    <!-- 모든 Req, Res 에 필터 적용 -->
+    <!-- 모든 HTTP 통신에 에 필터 적용 -->
     <filter-mapping>
         <filter-name>tempFilter</filter-name>
         <url-pattern>/*</url-pattern>
