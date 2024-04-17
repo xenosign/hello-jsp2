@@ -24,6 +24,22 @@
 />
 ```
 
+- 맥의 경우 useSSL=false 해제 필요
+
+```xml
+    <Resource
+            auth="Container"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            url="jdbc:mysql://localhost/test"
+            username="root"
+            password="1234"
+            name="jdbc/mysqlBook"
+            type="javax.sql.DataSource"
+            maxActive="4"
+            maxWait="10000"
+    />
+```
+
 ## DAO 에 접속 세팅
 
 - DataSource 를 이용하여 연결
