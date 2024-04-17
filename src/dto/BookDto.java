@@ -8,6 +8,11 @@ public class BookDto {
 	String bookName;
 	String bookLoc;
 
+	public BookDto(String bookName, String bookLoc) {
+		this.bookName = bookName;
+		this.bookLoc = bookLoc;
+	}
+
 	public BookDto(int bookId, String bookName, String bookLoc) {
 		this.bookId = bookId;
 		this.bookName = bookName;
